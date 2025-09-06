@@ -91,6 +91,9 @@
         padding-right: 0 !important;
         max-width: none !important;
     }
+    .container-fluid {
+        padding: 0 15px 40px 15px;
+    }
     .BirthdayDecorationArea {
         padding: 0 15px;
     }
@@ -826,6 +829,7 @@
     .CheckOutDetails .VenueAddress aside {flex-direction: column;}
     .LargeModal .modal-dialog {max-width: 92%;}
     .BirthdayDecorationArea .container-fluid .row .col-6 {padding: 5px;}
+    .col-6 {margin-top: 0px !important;}
     footer .FooterLinks ul li a {font-size: 14px;}
     .BirthdayDecorationArea img {width: 100%; height: auto;}
     .HeroRight img {width: 100%; height: auto;}
