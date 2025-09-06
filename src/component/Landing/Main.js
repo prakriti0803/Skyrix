@@ -800,6 +800,15 @@ const Main = () => {
 
         <ServiceCarousel />
 
+        {/* Additional static banner above the Birthday Decoration section */}
+        <div className="BirthdayDecorationArea" style={{ cursor: "pointer" }}>
+          <img
+            src={require("../../assets/images/newimages/newbanner/birthday.png")}
+            alt="Birthday Special Banner"
+            onClick={() => handleCategory({ categoryName: "BIRTHDAY" })}
+          />
+        </div>
+
         <div className="BirthdayDecorationArea BirthDecImage">
           <div className="container-fluid">
             <div className="section-title">

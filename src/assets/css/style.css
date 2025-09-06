@@ -1232,7 +1232,6 @@ header .HeaderArea .HeaderRight .Login:hover {
   height: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
-  margin-left: 6px;
 }
 
 .BirthdayDecorationArea img:hover {
