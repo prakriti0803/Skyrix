@@ -1087,13 +1087,62 @@ header .HeaderArea .HeaderRight .Login:hover {
   object-fit: contain;
 }
 
+/* Home hero carousel: fix overlap and handle any image size */
+.Hero-Section { padding-bottom: 12px; }
+
+/* Ensure the homepage hero carousel is not sticky and doesn't overlap following sections */
+.Hero-Section #carouselExampleIndicators {
+  position: relative !important;
+  top: 0 !important;
+}
+
+/* Hero container should size to image height naturally */
+.Hero-Section .HeroRight {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  border-radius: 16px;
+}
+
+/* Images should be full width and auto height for all screen sizes */
+.Hero-Section .HeroRight img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center center;
+  display: block;
+}
+
+/* Keep indicators inside the hero safely */
+.Hero-Section .carousel-indicators {
+  bottom: 10px;
+  gap: 10px;
+}
+
+/* Make the hero carousel dots smaller on smaller screens */
+@media (max-width: 768px) {
+  .Hero-Section .carousel-indicators { gap: 6px; bottom: 8px; }
+  .Hero-Section .carousel-indicators button {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .Hero-Section .carousel-indicators { gap: 5px; bottom: 6px; }
+  .Hero-Section .carousel-indicators button {
+    width: 6px;
+    height: 6px;
+  }
+}
+
 .PrivateDining {
   background-color: #fff;
 }
 
 .section-title {
   text-align: center;
-  margin: 40px auto;
   padding: 0 16px;
 }
 
@@ -1104,9 +1153,12 @@ header .HeaderArea .HeaderRight .Login:hover {
   margin-bottom: 12px;
 }
 
-.PrivateDining .section-title {
+.PrivateDining {
   text-align: center;
   margin: 0 0 50px 0;
+}
+.section-title {
+  text-align: center;
 }
 
 .PrivateDining .section-title h2 {
@@ -4012,12 +4064,18 @@ i.fa-star {
 
 /* .FeatureArea2 .owl-item img {display: inline-block!important; width: auto!important;} */
 
-.FeatureArea .section-title {
+.FeatureArea {
   text-align: center !important;
-  margin: 40px auto 50px auto;
   padding: 0 16px;
   width: 100%;
   display: block;
+}
+
+.section-title {
+    padding: 0 16px;
+  width: 100%;
+  display: block;
+   text-align: center !important;
 }
 
 .FeatureArea .section-title h2 {

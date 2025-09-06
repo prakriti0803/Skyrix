@@ -1838,8 +1838,7 @@
     display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: 25px;
-  padding: 0 40px;
+  padding: 0 5px;
 }
 
 .faq-section-enhanced .section-title h2 {

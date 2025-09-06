@@ -627,11 +627,6 @@ const Main = () => {
             <img src={require("../../assets/images/fifthcard.png")} />
             <p>Kids <br /> party</p>
           </div>
-          {/* 7. Room and hall */}
-          <div className="card1" style={{ cursor: "pointer" }} onClick={() => handleCategory({ categoryName: "ROOM & HALL DECOR'S" })}>
-            <img src={require("../../assets/images/sixthcard.png")} />
-            <p>Room <br /> and hall</p>
-          </div>
           {/* 8. Anniversary */}
           <div className="card1" style={{ cursor: "pointer" }} onClick={() => handleCategory({ categoryName: "ANNIVERSARY" })}>
             <img className="imgmat" src={require("../../assets/images/seventhcard.png")} />
@@ -688,7 +683,7 @@ const Main = () => {
         </div>
       </div>
 
-  <div className="Main" style={{marginTop: "-64px"}}>
+  <div className="Main">
         <div className="FeatureArea">
           <div className="container-fluid" style={{ width: "100%", padding: "0", margin: "0" }}>
             <div className="section-title">
