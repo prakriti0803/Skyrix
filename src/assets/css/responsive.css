@@ -711,7 +711,7 @@
         overflow-x: hidden;
     }
     
-    .BirthdayDecorationArea {padding: 20px 5px;}
+    .BirthdayDecorationArea {padding: 0 5px;}
     .ProductReviewsArea {padding: 50px 15px;}
     .hero-section {padding: 0 15px;}
     footer .FooterTop {padding: 25px 15px;}

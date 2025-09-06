@@ -808,6 +808,7 @@ const Main = () => {
                 Transform Your Birthday into a Magical Celebration with Stunning
                 Decorations!
               </p>
+  
             </div>
 
             <div className="scroll-container-wrapper">
@@ -1673,7 +1674,13 @@ const Main = () => {
 
         <div className="BirthdayDecorationArea client">
 
-          <img src={require("../../assets/images/Our Clients.png")} />
+          <img src={require("../../assets/images/Our Clients.png")} className="client-img-desktop" />
+          {/* Mobile-only Our Clients image */}
+          <img
+            src={require("../../assets/images/stats 3.png")}
+            alt="Our Clients"
+            className="client-img-mobile"
+          />
 
 
         </div>
