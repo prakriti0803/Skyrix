@@ -1549,7 +1549,7 @@ const Main = () => {
           </div>
         </div>
 
-        <div className="about-section">
+  <div className="about-section">
           <h1>
             <strong> Skyrixe – Celebrate Life’s Special Moments with us
               Us&nbsp;&nbsp;&nbsp;</strong>
@@ -1594,6 +1594,14 @@ const Main = () => {
   <a href="#">Balloon decoration in Patna</a>
 </div>
 
+        </div>
+
+        {/* Banner above FAQ section */}
+        <div className="BirthdayDecorationArea" style={{ cursor: "pointer" }}>
+          <img
+            src={require("../../assets/images/newimages/newbanner/cities.avif")}
+            alt="Skyrixe Cities Banner"
+          />
         </div>
 
         {/* ===== FAQ SECTION ===== */}

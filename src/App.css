@@ -1864,7 +1864,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 0 0 7px 0;
+  margin: 15px 0 7px 0;
   padding: 0 40px;
 }
 
@@ -3854,6 +3854,7 @@
 
 .PrivateDiningBox h6 {
   font-weight: 600;
+  text-align: left;
 }
 
 .content-wrap {
