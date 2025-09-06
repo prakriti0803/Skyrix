@@ -5408,6 +5408,24 @@ header nav ul li:hover .Sub_Categories_dropdown {
   margin: 0;
 }
 
+/* Enable smooth touch scrolling and cursor for drag-scroll containers on mobile */
+.homepage-birthday-scroll-container,
+.homepage-anniversary-scroll-container,
+.homepage-kids-scroll-container,
+.homepage-baby-shower-scroll-container,
+.testimonials-slider {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  cursor: grab;
+}
+.homepage-birthday-scroll-container.dragging,
+.homepage-anniversary-scroll-container.dragging,
+.homepage-kids-scroll-container.dragging,
+.homepage-baby-shower-scroll-container.dragging,
+.testimonials-slider.dragging {
+  cursor: grabbing;
+}
+
 .carousel-indicators button {
   width: 12px;
   height: 12px;

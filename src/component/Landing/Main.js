@@ -465,6 +465,75 @@ const Main = () => {
     }
   }, []);
 
+  // Enable swipe/drag-to-scroll on mobile for horizontal lists
+  useEffect(() => {
+    const makeDragScrollable = (el) => {
+      if (!el) return () => {};
+      let isDown = false;
+      let startX = 0;
+      let scrollLeft = 0;
+
+      const onPointerDown = (e) => {
+        isDown = true;
+        el.classList.add('dragging');
+        const pageX = e.pageX ?? (e.touches && e.touches[0] && e.touches[0].pageX);
+        startX = pageX - el.offsetLeft;
+        scrollLeft = el.scrollLeft;
+      };
+      const onPointerMove = (e) => {
+        if (!isDown) return;
+        // prevent vertical scrolling from hijacking while dragging horizontally
+        e.preventDefault();
+        const pageX = e.pageX ?? (e.touches && e.touches[0] && e.touches[0].pageX);
+        const x = pageX - el.offsetLeft;
+        const walk = x - startX; // positive = moving right
+        el.scrollLeft = scrollLeft - walk;
+      };
+      const onPointerUp = () => {
+        isDown = false;
+        el.classList.remove('dragging');
+      };
+
+      // Pointer events (modern) + touch fallback for Safari
+      el.addEventListener('mousedown', onPointerDown, { passive: true });
+      el.addEventListener('touchstart', onPointerDown, { passive: true });
+      window.addEventListener('mousemove', onPointerMove, { passive: false });
+      window.addEventListener('touchmove', onPointerMove, { passive: false });
+      window.addEventListener('mouseup', onPointerUp, { passive: true });
+      window.addEventListener('touchend', onPointerUp, { passive: true });
+      window.addEventListener('mouseleave', onPointerUp, { passive: true });
+
+      return () => {
+        el.removeEventListener('mousedown', onPointerDown);
+        el.removeEventListener('touchstart', onPointerDown);
+        window.removeEventListener('mousemove', onPointerMove);
+        window.removeEventListener('touchmove', onPointerMove);
+        window.removeEventListener('mouseup', onPointerUp);
+        window.removeEventListener('touchend', onPointerUp);
+        window.removeEventListener('mouseleave', onPointerUp);
+      };
+    };
+
+    const cleanups = [];
+    [
+      birthdayScrollRef.current,
+      anniversaryScrollRef.current,
+      kidsScrollRef.current,
+      babyShowerScrollRef.current,
+      reviewsScrollRef.current,
+    ].forEach((el) => {
+      if (el) cleanups.push(makeDragScrollable(el));
+    });
+
+    // Also attach to any additional horizontal containers rendered by other components
+    const extraEls = document.querySelectorAll(
+      '.homepage-birthday-scroll-container, .homepage-anniversary-scroll-container, .homepage-kids-scroll-container, .homepage-baby-shower-scroll-container, .testimonials-slider'
+    );
+    extraEls.forEach((el) => cleanups.push(makeDragScrollable(el)));
+
+    return () => cleanups.forEach((fn) => fn && fn());
+  }, []);
+
   // Check arrow visibility when data loads
   useEffect(() => {
     // Small delay to ensure DOM is updated after data loads
