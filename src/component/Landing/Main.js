@@ -1582,15 +1582,15 @@ const Main = () => {
           </p>
           <div className="city-links">
   <a href="#">Balloon decoration in Bangalore</a> |
-  <a href="#">Balloon decoration in Bhubaneswar</a> |
+  <a href="#">Balloon decoration in Indore</a> |
   <a href="#">Balloon decoration in Chennai</a> |
   <a href="#">Balloon decoration in Delhi</a> |
   <a href="#">Balloon decoration in Gurgaon</a> |
   <a href="#">Balloon decoration in Hyderabad</a> |
   <a href="#">Balloon decoration in Mumbai</a> |
-  <a href="#">Balloon decoration in Pune</a> |
+  <a href="#">Balloon decoration in Jaipur</a> |
   <a href="#">Balloon decoration in Kolkata</a> |
-  <a href="#">Balloon decoration in Noida</a> |
+  <a href="#">Balloon decoration in Goa</a> |
   <a href="#">Balloon decoration in Patna</a>
 </div>
 
