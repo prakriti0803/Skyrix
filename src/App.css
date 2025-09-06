@@ -1,3 +1,47 @@
+@media (min-width: 1024px) {
+  .client-img-mobile {
+    display: none !important;
+  }
+}
+/* Show the BirthdayDecorationArea .client image only on mobile */
+@media (max-width: 576px) {
+  .client-img-mobile {
+    display: block !important;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto 1.5rem auto;
+  }
+  .client-img-desktop {
+    display: none !important;
+  }
+}
+/* Show the BirthdayDecorationArea clients image only on mobile */
+@media (max-width: 576px) {
+  .birthday-clients-mobile-img-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  .birthday-clients-mobile-img {
+    display: block !important;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+}
+/* Show the BirthdayDecorationArea clients image only on mobile */
+@media (max-width: 576px) {
+  .birthday-clients-mobile-img {
+    display: block !important;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto 1.5rem auto;
+  }
+  /* Optionally hide the default image if needed */
+  .BirthdayDecorationArea .default-clients-img {
+    display: none !important;
+  }
+}
 @media (min-width: 1025px) and (max-width: 1440px) {
   .card1::before {
     top: 8px;
