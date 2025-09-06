@@ -70,8 +70,8 @@ const TimeSlotModal = ({ show, onHide, onTimeSelect, onBack, selectedDate }) => 
                   {slot.time}
                   {slot.hasOffer && (
                     <span className="OfferIndicator">
-                      <span className="LightningIcon">⚡</span>
-                      <span className="OfferText">{slot.offerText}</span>
+                    
+              
                     </span>
                   )}
                 </span>

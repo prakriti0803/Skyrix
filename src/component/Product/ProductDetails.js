@@ -1946,7 +1946,7 @@ const ProductDetails = () => {
                       <div className="carousel-viewport">
                         {/* Card Container */}
                         <div className="recommended-products-grid card-container">
-                          {(filteredRecommendedProducts.length > 0 ? filteredRecommendedProducts : getProductDetails?.data?.product?.productcustomizeDetails)?.slice(0, 8)?.map((item, i) => (
+                          {(filteredRecommendedProducts.length > 0 ? filteredRecommendedProducts : getProductDetails?.data?.product?.productcustomizeDetails)?.map((item, i) => (
                           <div className="recommended-product-card" key={i}>
                             <div className="recommended-product-image">
                               <img

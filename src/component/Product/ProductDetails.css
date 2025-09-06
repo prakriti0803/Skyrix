@@ -1,3 +1,8 @@
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .carousel-nav-left {
+    left: -2px !important;
+  }
+}
 :root {
   --primary-dark: #303943;
   --primary-pink: #e5097f;
@@ -58,6 +63,12 @@
 }
 
 @media (max-width: 576px) {
+  .carousel-nav-right {
+    right: -10px !important;
+  }
+  carousel-nav-left {
+    left: 100px;
+}
   .product-details-section {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -65,6 +76,11 @@
   .product-details-section .container-fluid {
     padding-left: 0 !important;
     padding-right: 0 !important;
+  }
+
+  /* Remove margin from carousel-viewport on mobile */
+  .carousel-viewport {
+    margin: 0 !important;
   }
 }
 
@@ -170,6 +186,9 @@
 }
 
 @media (max-width: 480px) {
+  .carousel-nav-left {
+    left: -5px !important;
+  }
   .product-details-section .product-hero-section,
   .product-details-section .recommended-section,
   .product-details-section .reviews-section-card,
@@ -1372,7 +1391,7 @@
 }
 
 .carousel-nav-right {
-  right: -65px; /* Position just outside the container padding */
+  right: -17px; /* Position just outside the container padding */
 }
 
 /* Navigation Arrows */
@@ -1412,8 +1431,6 @@
 /* Desktop View - Show 4 full cards + 50% of 5th card */
 @media (min-width: 1025px) {
   .carousel-viewport {
-    /* 4 cards * 220px + 3 gaps * 16px + 50% of 5th card (110px) = 1038px */
-    width: 1038px;
     margin: 0 auto;
   }
   
@@ -1425,8 +1442,6 @@
 /* Tablet View - Show 3 full cards + 50% of 4th card */
 @media (min-width: 769px) and (max-width: 1024px) {
   .carousel-viewport {
-    /* 3 cards * 200px + 2 gaps * 16px + 50% of 4th card (100px) = 732px */
-    width: 732px;
     margin: 0 auto;
   }
   
@@ -1440,8 +1455,6 @@
 
 
   .carousel-viewport {
-    /* 1 card * 160px + 50% of 2nd card (80px) + 1 gap * 16px = 256px */
-    width: 256px;
     margin: 0 auto;
   }
   
@@ -1474,8 +1487,6 @@
 @media (max-width: 480px) {
 
   .carousel-viewport {
-    /* 1 card * 140px + 50% of 2nd card (70px) + 1 gap * 12px = 222px */
-    width: 222px;
     margin: 0 auto;
   }
   
@@ -2530,15 +2541,11 @@
     padding-right: 0px !important;
   }
 
-  .product-details-section .row {
-    margin-left: -6px !important;
-    margin-right: -6px !important;
-  }
-
   .product-details-section [class*="col-"] {
     padding-left: 6px !important;
     padding-right: 6px !important;
   }
+}
 
   /* Normalize headings and text spacing */
   .product-details-section h1,
@@ -2614,7 +2621,7 @@
   .product-details-section .cta-bar {
     padding: 10px 12px !important;
   }
-}
+
 
 /* Tablet spacing light trim */
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -3069,9 +3076,10 @@
 
 /* Small mobile screens (below 576px) - 2 products per row */
 @media (max-width: 575px) {
-  .similar-products-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 6px;
+  .carousel-viewport {
+    margin: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
   }
 
   .product-card {
