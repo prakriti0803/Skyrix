@@ -1188,6 +1188,7 @@ header .HeaderArea .HeaderRight .Login:hover {
   height: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
+  margin-left: 6px;
 }
 
 .BirthdayDecorationArea img:hover {
@@ -4392,7 +4393,7 @@ footer {
 
 footer .FooterTop {
   background-color: #ffffff;
-  padding: 100px 0 50px;
+  padding: 50px 0 50px;
 }
 
 footer .FooterTop .FooterLogo {

@@ -733,7 +733,7 @@
 /* ===== ELEVATED REVIEWS SECTION ===== */
 .reviews-section {
   background: #ffffff;
-  padding: 80px 20px 20px 20px;
+  padding: 10px 20px 20px 20px;
   position: relative;
   overflow: hidden;
 }
@@ -752,7 +752,7 @@
 
 .reviews-header {
   text-align: center;
-  margin: 0 0 50px 0;
+  margin: 0 0 0px 0;
   position: relative;
   z-index: 2;
 }
@@ -768,7 +768,7 @@
   color: #6b7280;
   font-size: 16px;
   font-weight: 400;
-  margin: 0;
+  margin-left: 20px;
 }
 
 /* ===== ENHANCED REVIEW CAROUSEL ===== */
@@ -1596,7 +1596,7 @@
 /* ===== ELEVATED ABOUT SECTION ===== */
 .about-section {
   background: #ffffff;
-  padding: 40px 20px;
+  padding: 10px 15px;
   position: relative;
   max-width: none !important;
   width: 100% !important;
@@ -1608,7 +1608,6 @@
   flex-direction: column;
   align-items: flex-start !important;
   justify-content: flex-start;
-  min-height: 100vh;
   box-sizing: border-box;
 }
 
@@ -1733,7 +1732,6 @@
 .about-section p {
   margin-bottom: 20px;
   line-height: 1.6;
-  max-width: 800px;
 }
 
 .services-highlight {
@@ -1861,7 +1859,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 0 0 70px 0;
+  margin: 0 0 7px 0;
   padding: 0 40px;
 }
 
@@ -1889,7 +1887,7 @@
 /* ===== ELEVATED FAQ SECTION ===== */
 .faq-section-enhanced {
   background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
-  padding: 40px 60px 70px 60px;
+  padding: 40px 60px 3px 60px;
   position: relative;
 }
 
