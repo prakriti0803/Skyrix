@@ -74,6 +74,115 @@
   }
 }
 
+/* ===== Compact Spacing Overrides for Product Details ===== */
+/* Goal: reduce excessive padding/margins across the product details page, especially on mobile */
+.product-details-section .product-hero-section,
+.product-details-section .recommended-section,
+.product-details-section .reviews-section-card,
+.product-details-section .need-to-know-section,
+.product-details-section .faq-section,
+.product-details-section .location-section,
+.product-details-section .cancellation-section {
+  padding: 12px 14px;
+  margin-bottom: 14px;
+}
+
+.product-details-section .section-title {
+  margin-bottom: 10px;
+}
+
+.product-details-section .recommended-tabs {
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.product-details-section .recommended-filter-tags {
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.product-details-section .filter-tag,
+.product-details-section .inclusion-tag,
+.product-details-section .experience-item,
+.product-details-section .review-card,
+.product-details-section .needtoknow-content,
+.product-details-section .cancellation-content {
+  padding: 8px 10px;
+}
+
+.product-details-section .product-hero-rating {
+  padding: 8px 10px;
+}
+
+/* Tighten card gutters */
+.product-details-section [class*="col-"] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Mobile-first even tighter spacing */
+@media (max-width: 768px) {
+  .product-details-section .product-hero-section,
+  .product-details-section .recommended-section,
+  .product-details-section .reviews-section-card,
+  .product-details-section .need-to-know-section,
+  .product-details-section .faq-section,
+  .product-details-section .location-section,
+  .product-details-section .cancellation-section {
+    padding: 8px 10px;
+    margin-bottom: 10px;
+  }
+
+  .product-details-section .section-title {
+    margin-bottom: 8px;
+  }
+
+  .product-details-section .recommended-tabs {
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .product-details-section .recommended-filter-tags {
+    gap: 0.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .product-details-section [class*="col-"] {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .product-details-section .faq-question {
+    padding: 10px 12px 6px 12px !important;
+  }
+
+  .product-details-section .faq-answer {
+    padding: 0 12px 10px 12px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-details-section .product-hero-section,
+  .product-details-section .recommended-section,
+  .product-details-section .reviews-section-card,
+  .product-details-section .need-to-know-section,
+  .product-details-section .faq-section,
+  .product-details-section .location-section,
+  .product-details-section .cancellation-section {
+    padding: 6px 8px;
+    margin-bottom: 8px;
+  }
+
+  .product-details-section [class*="col-"] {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .product-details-section .section-title {
+    margin-bottom: 6px;
+  }
+}
+
 .loading-wrapper {
   display: flex;
   justify-content: center;
@@ -84,7 +193,7 @@
 
 /* ===== PRODUCT HERO SECTION (RIGHT COLUMN) ===== */
 .product-hero-section {
-  padding: 1.5rem;
+  padding: 1rem;
   margin-bottom: 2rem;
   border: 1px solid #f0f0f0;
   border-radius: 12px;
@@ -950,7 +1059,7 @@
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--text-dark);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .section-title i {
@@ -962,7 +1071,7 @@
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
-  padding: 1.5rem 2rem;
+  padding: 1rem 1rem;
   margin-bottom: 2rem;
   position: relative;
   z-index: 1; /* Lower z-index so buttons can appear over it */
@@ -970,15 +1079,15 @@
 
 .recommended-tabs {
   display: flex;
-  gap: 2rem;
-  margin-bottom: 1.5rem;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
   border-bottom: 1px solid #f0f0f0;
 }
 
 .recommended-tab {
   background: none;
   border: none;
-  padding: 0.75rem 0;
+  padding: 0.5rem 0;
   font-size: 1rem;
   font-weight: 600;
   color: #6c757d;
@@ -1772,9 +1881,6 @@
   font-size: 0.9rem;
 }
 
-.add-review-btn:hover {
-  background: var(--border-gray);
-}
 
 .rating-breakdown {
   margin: 1.5rem 0;
@@ -2390,7 +2496,8 @@
 .product-details-section .faq-item.active .faq-answer {
   max-height: none !important;
   opacity: 1 !important;
-  padding: 10px 50px 20px 65px !important;
+  /* Default compact padding; larger values will be applied by responsive rules if needed */
+  padding: 12px 16px 14px 20px !important;
 }
 
 .faq-readmore {
@@ -2398,9 +2505,156 @@
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
-  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
   text-decoration: none;
   display: inline-block;
+}
+
+/* ================================ */
+/* Mobile compact spacing overrides */
+/* Scope: Product Details page only */
+/* ================================ */
+@media (max-width: 768px) {
+  /* Trim global container gutters just for this page */
+  .product-details-section {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .product-details-section .container-fluid {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .product-details-section .row {
+    margin-left: -6px !important;
+    margin-right: -6px !important;
+  }
+
+  .product-details-section [class*="col-"] {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+
+  /* Normalize headings and text spacing */
+  .product-details-section h1,
+  .product-details-section h2,
+  .product-details-section h3,
+  .product-details-section h4,
+  .product-details-section h5,
+  .product-details-section h6 {
+    margin: 8px 0 !important;
+  }
+
+  .product-details-section p {
+    margin: 8px 0 !important;
+  }
+
+  /* Section titles and common blocks */
+  .product-details-section .section-title {
+    padding: 8px 0 !important;
+    margin: 8px 0 !important;
+  }
+
+  /* Key sections on details page: reduce outer paddings */
+  .product-details-section .reviews-section,
+  .product-details-section .need-to-know-section,
+  .product-details-section .faq-section,
+  .product-details-section .location-section,
+  .product-details-section .cancellation-section {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* FAQ tweaks for mobile: reduce generous inner paddings */
+  .product-details-section .faq-item {
+    margin-bottom: 8px !important;
+  }
+
+  .product-details-section .faq-question {
+    padding: 10px 14px 0 !important;
+  }
+
+  .product-details-section .faq-item.active .faq-answer {
+    padding: 8px 16px 12px 24px !important;
+  }
+
+  /* Reviews list: tighten spacing */
+  .product-details-section .reviews-container,
+  .product-details-section .reviews-list {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .product-details-section .review-card,
+  .product-details-section .review-item {
+    padding: 10px 12px !important;
+    margin: 8px 0 !important;
+  }
+
+  /* Gallery and summary areas */
+  .product-details-section .gallery,
+  .product-details-section .gallery-section,
+  .product-details-section .summary-section,
+  .product-details-section .summary-card,
+  .product-details-section .pricing-card,
+  .product-details-section .feature-card {
+    padding: 0 !important;
+    margin: 8px 0 !important;
+  }
+
+  /* Fixed booking/CTA bars */
+  .product-details-section .fixed-booking-bar,
+  .product-details-section .cta-bar {
+    padding: 10px 12px !important;
+  }
+}
+
+/* Tablet spacing light trim */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .product-details-section .reviews-section,
+  .product-details-section .need-to-know-section,
+  .product-details-section .faq-section,
+  .product-details-section .location-section,
+  .product-details-section .cancellation-section {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .product-details-section .faq-item.active .faq-answer {
+    padding: 10px 24px 16px 32px !important;
+  }
+}
+
+/* =============================== */
+/* Desktop FAQ alignment overrides */
+/* Scope: Product Details only     */
+/* =============================== */
+@media (min-width: 1025px) {
+  /* Remove large gradient box spacing for this page */
+  .product-details-section .faq-section-enhanced {
+    background: transparent !important;
+    padding: 0 !important;
+  }
+
+  /* Make the FAQ grid align to the column without inner padding */
+  .product-details-section .faq-section-enhanced .faq-grid {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+    gap: 16px !important;
+  }
+
+  /* Ensure items use full available column width */
+  .product-details-section .faq-section-enhanced .faq-item {
+    flex: 1 1 100% !important;
+    min-width: 0 !important;
+  }
 }
 
 .faq-readmore:hover {
