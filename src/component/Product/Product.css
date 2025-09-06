@@ -1,4 +1,12 @@
 @media (max-width: 576px) {
+  .modern-carousel-nav.modern-nav-prev {
+    position: absolute !important;
+    left: 10px !important;
+    top: 50% !important;
+    right: auto;
+    transform: translateY(-50%);
+    z-index: 9999 !important;
+  }
   .modern-carousel-nav.modern-nav-next {
     position: absolute !important;
     right: 0 !important;
