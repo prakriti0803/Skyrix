@@ -1035,3 +1035,13 @@
         z-index: 1 !important;
     }
 }
+
+    /* === MOBILE ONLY COLUMN PADDING OVERRIDE === */
+    /* Remove horizontal padding on columns that use both col-lg-6 and col-12 when on small/mobile screens */
+    @media (max-width: 576px) {
+        .row > .col-lg-6.col-12,
+        .row > .col-12.col-lg-6 { /* order safeguard */
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }

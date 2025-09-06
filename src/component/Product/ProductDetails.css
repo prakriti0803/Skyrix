@@ -55,8 +55,8 @@
 
 @media (max-width: 576px) {
   .product-details-section {
-    padding-left: 15px;
-    padding-right: 15px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
   }
 }
 
@@ -4010,5 +4010,30 @@
 
   .inclusion-item p {
     margin: 15px;
+  }
+}
+
+/* MOBILE ONLY: Remove border-radius from image wrappers and product image */
+@media (max-width: 576px) {
+  .main-product-image,
+  .image-zoom-wrapper,
+  .carousel-item.active {
+    border-radius: 0 !important;
+  }
+}
+
+/* MOBILE ONLY: Force remove border-radius from main-product-image */
+@media (max-width: 576px) {
+  .main-product-image {
+    border-radius: 0 !important;
+  }
+}
+
+/* MOBILE ONLY: Remove padding from product gallery wrapper */
+@media (max-width: 576px) {
+  .product-gallery-wrapper,
+  .why-skyrixe-box .product-gallery-wrapper,
+  .product-gallery-wrapper.gallery-fixed {
+    padding: 0 !important;
   }
 }
