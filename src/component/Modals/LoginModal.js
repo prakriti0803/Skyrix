@@ -949,9 +949,7 @@ const LoginModal = ({
             <div className="OrderSummary">
               <h4>Order Summary</h4>
               <div className="SummaryContent">
-                <div className="LoginPrompt">
-                  Please complete Login for Payment, Coupon and Edit booking options
-                </div>
+                
 
                 <div className="BookingDetails">
                   <div className="BookingInfo">
