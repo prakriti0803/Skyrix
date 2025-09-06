@@ -365,8 +365,7 @@
   .homepage-kids-scroll-container,
   .homepage-baby-shower-scroll-container {
     gap: 15px !important;
-    width: 315px !important; /* 200px (1 card) + 15px (gap) + 100px (0.5 card) = 315px */
-  max-width: calc(100% - 40px) !important; /* Ensure it doesn't overflow screen */
+    width: 100% !important; /* 200px (1 card) + 15px (gap) + 100px (0.5 card) = 315px */
     margin: 0 auto !important;
   }
   

@@ -110,6 +110,9 @@ figure {
   position: relative;
 }
 
+article {
+  padding: 0 5px;
+}
 m {
   margin: 0;
   padding: 0;
@@ -1087,13 +1090,62 @@ header .HeaderArea .HeaderRight .Login:hover {
   object-fit: contain;
 }
 
+/* Home hero carousel: fix overlap and handle any image size */
+.Hero-Section { padding-bottom: 12px; }
+
+/* Ensure the homepage hero carousel is not sticky and doesn't overlap following sections */
+.Hero-Section #carouselExampleIndicators {
+  position: relative !important;
+  top: 0 !important;
+}
+
+/* Hero container should size to image height naturally */
+.Hero-Section .HeroRight {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  border-radius: 16px;
+}
+
+/* Images should be full width and auto height for all screen sizes */
+.Hero-Section .HeroRight img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center center;
+  display: block;
+}
+
+/* Keep indicators inside the hero safely */
+.Hero-Section .carousel-indicators {
+  bottom: 10px;
+  gap: 10px;
+}
+
+/* Make the hero carousel dots smaller on smaller screens */
+@media (max-width: 768px) {
+  .Hero-Section .carousel-indicators { gap: 6px; bottom: 8px; }
+  .Hero-Section .carousel-indicators button {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .Hero-Section .carousel-indicators { gap: 5px; bottom: 6px; }
+  .Hero-Section .carousel-indicators button {
+    width: 6px;
+    height: 6px;
+  }
+}
+
 .PrivateDining {
   background-color: #fff;
 }
 
 .section-title {
   text-align: center;
-  margin: 40px auto;
   padding: 0 16px;
 }
 
@@ -1104,9 +1156,12 @@ header .HeaderArea .HeaderRight .Login:hover {
   margin-bottom: 12px;
 }
 
-.PrivateDining .section-title {
+.PrivateDining {
   text-align: center;
   margin: 0 0 50px 0;
+}
+.section-title {
+  text-align: center;
 }
 
 .PrivateDining .section-title h2 {
@@ -3714,36 +3769,7 @@ i.fa-star {
   margin: 0 auto !important;
 }
 
-/* Responsive FeatureArea container-fluid centering */
-@media (min-width: 576px) {
-  .FeatureArea .container-fluid {
-    max-width: 540px !important;
-  }
-}
 
-@media (min-width: 768px) {
-  .FeatureArea .container-fluid {
-    max-width: 720px !important;
-  }
-}
-
-@media (min-width: 992px) {
-  .FeatureArea .container-fluid {
-    max-width: 960px !important;
-  }
-}
-
-@media (min-width: 1200px) {
-  .FeatureArea .container-fluid {
-    max-width: 1140px !important;
-  }
-}
-
-@media (min-width: 1400px) {
-  .FeatureArea .container-fluid {
-    max-width: 1320px !important;
-  }
-}
 
 /* 4x2 Grid Layout for FeatureArea - Full width utilization */
 .FeatureArea .row {
@@ -4012,12 +4038,18 @@ i.fa-star {
 
 /* .FeatureArea2 .owl-item img {display: inline-block!important; width: auto!important;} */
 
-.FeatureArea .section-title {
+.FeatureArea {
   text-align: center !important;
-  margin: 40px auto 50px auto;
-  padding: 0 16px;
+  padding: 0 15px;
   width: 100%;
   display: block;
+}
+
+.section-title {
+    padding: 0 16px;
+  width: 100%;
+  display: block;
+   text-align: center !important;
 }
 
 .FeatureArea .section-title h2 {
@@ -4098,7 +4130,6 @@ i.fa-star {
   opacity: 1;
 }
 
-.container,
 .container-lg,
 .container-md,
 .container-sm,
@@ -4109,7 +4140,11 @@ i.fa-star {
   padding-right: 15px;
   
 }
-
+.container {
+  width: 100%;
+    padding-left: 15px;
+  padding-right: 15px;
+}
 .container-fluid {
   max-width: 100%;
   margin: 0 auto;
@@ -4118,35 +4153,30 @@ i.fa-star {
 /* Responsive container-fluid centering for all screen sizes */
 @media (min-width: 576px) {
   .container-fluid {
-    max-width: 540px;
     margin: 0 auto;
   }
 }
 
 @media (min-width: 768px) {
   .container-fluid {
-    max-width: 720px;
     margin: 0 auto;
   }
 }
 
 @media (min-width: 992px) {
   .container-fluid {
-    max-width: 960px;
     margin: 0 auto;
   }
 }
 
 @media (min-width: 1200px) {
   .container-fluid {
-    max-width: 1140px;
     margin: 0 auto;
   }
 }
 
 @media (min-width: 1400px) {
   .container-fluid {
-    max-width: 1320px;
     margin: 0 auto;
   }
 }
@@ -7363,13 +7393,12 @@ ul.Icons li a img {
 /* Large screen optimization for FeatureArea */
 @media (min-width: 1400px) {
   .FeatureArea {
-    padding: 60px 30px;
+    padding: 25px 15px;
   }
   
   .FeatureArea .row {
     gap: 25px 20px !important;
     padding: 30px 0 !important;
-    max-width: 1400px !important;
     margin: 0 auto !important;
   }
   
@@ -7394,7 +7423,6 @@ ul.Icons li a img {
   .FeatureArea .row {
     gap: 30px 25px !important;
     padding: 35px 0 !important;
-    max-width: 1600px !important;
     margin: 0 auto !important;
   }
   
@@ -7413,7 +7441,6 @@ ul.Icons li a img {
   .FeatureArea .row {
     gap: 35px 30px !important;
     padding: 40px 0 !important;
-    max-width: 1800px !important;
     margin: 0 auto !important;
   }
   
@@ -7554,13 +7581,12 @@ ul.Icons li a img {
 /* Large screen optimization for FeatureArea */
 @media (min-width: 1400px) {
   .FeatureArea {
-    padding: 60px 30px;
+    padding: 25px 15px;
   }
   
   .FeatureArea .row {
     gap: 25px 20px !important;
     padding: 30px 0 !important;
-    max-width: 1400px !important;
     margin: 0 auto !important;
   }
   
@@ -7585,7 +7611,6 @@ ul.Icons li a img {
   .FeatureArea .row {
     gap: 30px 25px !important;
     padding: 35px 0 !important;
-    max-width: 1600px !important;
     margin: 0 auto !important;
   }
   
@@ -7604,7 +7629,6 @@ ul.Icons li a img {
   .FeatureArea .row {
     gap: 35px 30px !important;
     padding: 40px 0 !important;
-    max-width: 1800px !important;
     margin: 0 auto !important;
   }
   

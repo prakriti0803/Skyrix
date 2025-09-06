@@ -89,6 +89,10 @@
     .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container, .container-fluid {
         padding-left: 0 !important;
         padding-right: 0 !important;
+        max-width: none !important;
+    }
+    .BirthdayDecorationArea {
+        padding: 0 15px;
     }
 }
 
@@ -704,7 +708,7 @@
         overflow-x: hidden;
     }
     
-    .BirthdayDecorationArea {padding: 20px 15px;}
+    .BirthdayDecorationArea {padding: 20px 5px;}
     .ProductReviewsArea {padding: 50px 15px;}
     .hero-section {padding: 0 15px;}
     footer .FooterTop {padding: 25px 15px;}
@@ -712,8 +716,8 @@
     .reviews-section {padding: 25px 15px;}
     .about-section {padding: 25px 15px;}
     .faq-section-enhanced {padding: 25px 15px;}
-    .service-section {padding: 25px 5px;}
-    .enjoy-life-section {padding: 25px 15px;}
+    .service-section {padding: 0 5px;}
+    .enjoy-life-section {padding: 25px 5px;}
     
     /* FeatureArea 2x4 Grid - Small Mobile */
     .FeatureArea .row {

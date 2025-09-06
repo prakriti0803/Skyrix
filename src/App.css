@@ -1022,16 +1022,12 @@
 
 .testimonials-container {
   position: relative;
-  max-width: 1400px;
   margin: 0 auto;
   overflow: visible;
   z-index: 1; /* Lower z-index to stay below header */
 }
 
-/* Baby Shower section specific styling to match testimonials spacing */
-.BirthdayDecorationArea  {
-  padding: 5px;
-}
+
 
 /* Baby Shower Section Title Styling */
 .BirthdayDecorationArea .section-title {
@@ -1055,8 +1051,6 @@
 
 .scroll-container-wrapper {
   position: relative;
-  max-width: 1400px;
-  margin: 0 auto;
   overflow: visible; /* Ensure arrows are visible but contained */
   z-index: 65; /* Increased z-index to ensure scroll containers appear above banner */
 }
@@ -1481,8 +1475,7 @@
   }
   
   .testimonials-container {
-    width: 315px !important; /* Match testimonials-slider width */
-    max-width: calc(100vw - 40px) !important;
+    width: 100% !important; /* Match testimonials-slider width */
     margin: 0 auto !important;
     padding: 0 !important; /* Remove any padding that might interfere */
   }
@@ -1497,9 +1490,7 @@
   
   .testimonials-slider {
     gap: 15px !important;
-    width: 315px !important; /* 200px (1 card) + 15px (gap) + 100px (0.5 card) = 315px */
-    max-width: calc(100vw - 40px) !important;
-    margin: 0 auto !important;
+    width: 100% !important; /* 200px (1 card) + 15px (gap) + 100px (0.5 card) = 315px */
     padding: 20px 0 !important;
   }
   
@@ -1520,13 +1511,11 @@
 
 @media (max-width: 480px) {
   .reviews-section {
-    padding: 40px 10px 20px 10px !important; /* Reduce side padding on mobile */
+    padding: 0 5px !important; /* Reduce side padding on mobile */
   }
   
   .testimonials-container {
-    width: 315px !important; /* Match testimonials-slider width */
-    max-width: calc(100vw - 40px) !important;
-    margin: 0 auto !important;
+    width: 100% !important; /* Match testimonials-slider width */
     padding: 0 !important; /* Remove any padding that might interfere */
   }
   
@@ -1540,10 +1529,8 @@
   
   .testimonials-slider {
     gap: 15px !important;
-    width: 315px !important; /* 200px (1 card) + 15px (gap) + 100px (0.5 card) = 315px */
-    max-width: calc(100vw - 40px) !important;
-    margin: 0 auto !important;
-    padding: 20px 0 !important;
+    width: 100% !important; /* 200px (1 card) + 15px (gap) + 100px (0.5 card) = 315px */
+    padding: 5px 0 !important;
   }
   
   .customer-avatar {
@@ -1882,8 +1869,7 @@
     display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: 25px;
-  padding: 0 40px;
+  padding: 0 5px;
 }
 
 .faq-section-enhanced .section-title h2 {
@@ -2320,7 +2306,7 @@
   }
   
   .about-section {
-    padding: 30px 15px;
+    padding: 10px 5px;
     display: flex;
     flex-direction: column;
     align-items: flex-start !important;
@@ -3326,7 +3312,8 @@
 /* Mobile Devices */
 @media (max-width: 480px) {
   .faq-section-enhanced {
-    padding: 50px 10px;
+    padding: 15px 10px;
+    margin-bottom: 0;
   }
   
   .faq-section-enhanced .section-title {
@@ -3386,7 +3373,7 @@
 /* Extra Small Mobile Devices */
 @media (max-width: 360px) {
   .faq-section-enhanced {
-    padding: 40px 8px;
+    padding: 20px 8px;
   }
   
   .faq-section-enhanced .section-title h2 {
@@ -3713,8 +3700,8 @@
 
 .client {
   border: 2px solid transparent;
-  margin: 30px auto;
-  padding: 20px;
+  margin: 10px;
+  padding: 0;
   width: 97%;
   max-width: 98vw;
   border-radius: 12px;
