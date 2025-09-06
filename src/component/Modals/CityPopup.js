@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { X, Building, Search, MapPin } from 'lucide-react';
 import '../../assets/css/CitySelector.css';
+
+
 import delhi from '../../assets/images/delhi.png';
 import Mumbai from '../../assets/images/mumbai.png';
 import Lucknow from '../../assets/images/lucknow.png';
@@ -13,6 +15,15 @@ import Azamgarh from '../../assets/images/azamgarh.png';
 import Prayagraj from '../../assets/images/Prayagraj.png';
 import Pune from '../../assets/images/pune.png';
 import Jaunpur from '../../assets/images/jaunpur.png';
+import Chennai from '../../assets/images/chennai.png';
+import Patna from '../../assets/images/patna.png';
+import Kolkata from '../../assets/images/kolkata.png';
+import Jaipur from '../../assets/images/jaipur.png';
+import Indore from '../../assets/images/indore.png';
+import Goa from '../../assets/images/goa.png';
+import Chandigarh from '../../assets/images/chandigarh.png';
+import Bangalore from '../../assets/images/banglore.png';
+
 
 // All cities data - comprehensive list from API and additional cities
 const ALL_CITIES = [
@@ -371,6 +382,18 @@ const CityPopup = ({ cities, onSelect, onClose }) => {
   const cityIcons = {
     'Mumbai': (props) => <img src={Mumbai} alt="Mumbai" {...props} className="city-image" />,
     'Delhi': (props) => <img src={delhi} alt="Delhi" {...props} className="city-image" />,
+    'Delhi - NCR': (props) => <img src={delhi} alt="Delhi - NCR" {...props} className="city-image" />,
+    'Bangalore': (props) => <img src={Bangalore} alt="Bangalore" {...props} className="city-image" />,
+    'Chennai': (props) => <img src={Chennai} alt="Chennai" {...props} className="city-image" />,
+    'Patna': (props) => <img src={Patna} alt="Patna" {...props} className="city-image" />,
+    'Kolkata': (props) => <img src={Kolkata} alt="Kolkata" {...props} className="city-image" />,
+    'Jaipur': (props) => <img src={Jaipur} alt="Jaipur" {...props} className="city-image" />,
+    'Indore': (props) => <img src={Indore} alt="Indore" {...props} className="city-image" />,
+    'Goa': (props) => <img src={Goa} alt="Goa" {...props} className="city-image" />,
+    'Chandigarh': (props) => <img src={Chandigarh} alt="Chandigarh" {...props} className="city-image" />,
+    'Gandhinagar': (props) => <img src={Mau} alt="Gandhinagar" {...props} className="city-image" />,
+    'Siliguri': (props) => <img src={Indore} alt="Siliguri" {...props} className="city-image" />,
+    'Jammu': (props) => <img src={Azamgarh} alt="Jammu" {...props} className="city-image" />,
     'Azamgarh': (props) => <img src={Azamgarh} alt="Azamgarh" {...props} className="city-image" />,
     'Lucknow': (props) => <img src={Lucknow} alt="Lucknow" {...props} className="city-image" />,
     'Prayagraj': (props) => <img src={Prayagraj} alt="Prayagraj" {...props} className="city-image" />,
