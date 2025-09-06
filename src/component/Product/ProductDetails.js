@@ -2247,7 +2247,7 @@ const ProductDetails = () => {
                           </button>
                           <div className="faq-answer" role="region" aria-hidden="true">
                             <p>
-                              After the payment is completed a form will open on the website or the app which will ask you for your address, balloon color choices, cake flavor etc. Which you can fill online. If we have any doubts someone from CherishX team will call you and take additional details. You will always have our post-sales number in-case you want to discuss something.
+                              After payment, a form will open asking for your address, balloon colors, cake flavor, etc. If needed, our team will call for more details.
                             </p>
                           </div>
                         </div>
@@ -2258,7 +2258,7 @@ const ProductDetails = () => {
                           </button>
                           <div className="faq-answer" role="region" aria-hidden="true">
                             <p>
-                              Decoration will be done as in the pictures. In case you require different color balloons combination, please inform us over email or call us at 8081833833
+                              Decoration will match the pictures. For different balloon colors, contact us via email.
                             </p>
                           </div>
                         </div>

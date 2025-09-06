@@ -1650,17 +1650,18 @@ const Main = () => {
               occasions.</span>
           </p>
           <div className="city-links">
-  <a href="#">Balloon decoration in Bangalore</a> |
-  <a href="#">Balloon decoration in Indore</a> |
-  <a href="#">Balloon decoration in Chennai</a> |
-  <a href="#">Balloon decoration in Delhi</a> |
-  <a href="#">Balloon decoration in Gurgaon</a> |
-  <a href="#">Balloon decoration in Hyderabad</a> |
-  <a href="#">Balloon decoration in Mumbai</a> |
-  <a href="#">Balloon decoration in Jaipur</a> |
-  <a href="#">Balloon decoration in Kolkata</a> |
-  <a href="#">Balloon decoration in Goa</a> |
-  <a href="#">Balloon decoration in Patna</a>
+  <a href="#" onClick={(e) => { e.preventDefault(); handleCategory({ categoryName: "BALLOON BOUQUET" }); }}>Balloon decoration in Bangalore</a> |
+  <a href="#" onClick={(e) => { e.preventDefault(); handleCategory({ categoryName: "BALLOON BOUQUET" }); }}>Balloon decoration in Indore</a> |
+  <a href="#" onClick={(e) => { e.preventDefault(); handleCategory({ categoryName: "BALLOON BOUQUET" }); }}>Balloon decoration in Chennai</a> |
+  <a href="#" onClick={(e) => { e.preventDefault(); handleCategory({ categoryName: "BALLOON BOUQUET" }); }}>Balloon decoration in Delhi</a> |
+  <a href="#" onClick={(e) => { e.preventDefault(); handleCategory({ categoryName: "BALLOON BOUQUET" }); }}>Balloon decoration in Gurgaon</a> |
+  <a href="#" onClick={(e) => { e.preventDefault(); handleCategory({ categoryName: "BALLOON BOUQUET" }); }}>Balloon decoration in Hyderabad</a> |
+  <a href="#" onClick={(e) => { e.preventDefault(); handleCategory({ categoryName: "BALLOON BOUQUET" }); }}>Balloon decoration in Mumbai</a> |
+  <a href="#" onClick={(e) => { e.preventDefault(); handleCategory({ categoryName: "BALLOON BOUQUET" }); }}>Balloon decoration in Jaipur</a> |
+  <a href="#" onClick={(e) => { e.preventDefault(); handleCategory({ categoryName: "BALLOON BOUQUET" }); }}>Balloon decoration in Kolkata</a> |
+  <a href="#" onClick={(e) => { e.preventDefault(); handleCategory({ categoryName: "BALLOON BOUQUET" }); }}>Balloon decoration in Goa</a> |
+  <a href="#" onClick={(e) => { e.preventDefault(); handleCategory({ categoryName: "BALLOON BOUQUET" }); }}>Balloon decoration in Patna</a>
+
 </div>
 
         </div>
