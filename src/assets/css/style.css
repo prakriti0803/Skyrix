@@ -1788,6 +1788,13 @@ header .HeaderArea .HeaderRight .Login:hover {
   }
 }
 
+.loc h1 {
+  text-align: left;
+}
+
+.loc h6 {
+  text-align: left;
+}
 /* Extra Large screens (1400px+) - Better spacing and sizing */
 @media (min-width: 1400px) {
   .PrivateDiningBox {
