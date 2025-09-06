@@ -1,3 +1,13 @@
+@media (max-width: 576px) {
+  .modern-carousel-nav.modern-nav-next {
+    position: absolute !important;
+    right: 0 !important;
+    top: 50% !important;
+    left: auto;
+    transform: translateY(-50%);
+    z-index: 9999;
+  }
+}
 /* Product Page Specific Styles - Does not affect backend functionality */
 
 /* Main container for products page - Add side spacing and centering */
@@ -179,6 +189,9 @@
 .products-sort-fab.visible {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+}
+.products-sort-fab.visible{
+  z-index: 1 !important;
 }
 
 .products-page-container .sort-fab i {
