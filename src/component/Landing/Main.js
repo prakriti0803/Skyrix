@@ -800,6 +800,15 @@ const Main = () => {
 
         <ServiceCarousel />
 
+        {/* Additional static banner above the Birthday Decoration section */}
+        <div className="BirthdayDecorationArea" style={{ cursor: "pointer" }}>
+          <img
+            src={require("../../assets/images/newimages/newbanner/birthday.png")}
+            alt="Birthday Special Banner"
+            onClick={() => handleCategory({ categoryName: "BIRTHDAY" })}
+          />
+        </div>
+
         <div className="BirthdayDecorationArea BirthDecImage">
           <div className="container-fluid">
             <div className="section-title">
@@ -1048,6 +1057,42 @@ const Main = () => {
                   <i className="fa-solid fa-chevron-right"></i>
                 </button>
               )}
+            </div>
+          </div>
+        </div>
+
+        {/* Romantic Couple Celebrations Section (after Anniversary Decoration) */}
+        <div className="BirthdayDecorationArea couple-section">
+          <div className="container-fluid">
+            <div className="section-title">
+              <h2>Romantic Couple Celebrations</h2>
+            </div>
+
+            <div className="row g-4 couple-grid">
+              {[
+                { id: 1, label: 'Romantic Dates', img: require('../../assets/images/newimages/couplesection/1.avif') },
+                { id: 2, label: 'Proposal', img: require('../../assets/images/newimages/couplesection/2.avif') },
+                { id: 3, label: 'First Night', img: require('../../assets/images/newimages/couplesection/3.avif') },
+                { id: 4, label: 'Anniversary Decoration', img: require('../../assets/images/newimages/couplesection/4.avif') },
+              ].map((item) => (
+                <div key={item.id} className="col-6 col-lg-3">
+                  <div
+                    className="couple-card"
+                    role="button"
+                    tabIndex={0}
+                    onClick={() => handleCategory({ categoryName: 'ANNIVERSARY' })}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        handleCategory({ categoryName: 'ANNIVERSARY' });
+                      }
+                    }}
+                  >
+                    <img src={item.img} alt={item.label} loading="lazy" />
+                    
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

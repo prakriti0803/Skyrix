@@ -83,7 +83,6 @@
   height: 120px;
   position: relative;
   overflow: hidden;
-  margin-left: -10px;
 }
 
 .card1::before {
@@ -174,7 +173,9 @@
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 10px;
-    justify-content: center;
+  justify-content: center;
+  justify-items: center; /* center items within each grid cell */
+  align-items: center;
     padding: 0 25px;
     margin: 20px auto;
   }
@@ -203,7 +204,9 @@
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 8px;
-    justify-content: center;
+  justify-content: center;
+  justify-items: center; /* center items within each grid cell */
+  align-items: center;
     padding: 0 15px;
     margin: 15px auto;
   }
@@ -235,7 +238,9 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 6px;
-    justify-content: center;
+  justify-content: center;
+  justify-items: center; /* center items within each grid cell */
+  align-items: center;
     padding: 0 12px;
     margin: 12px auto;
   }
@@ -4341,7 +4346,7 @@
   
   .BirthdayDecorationArea .section-title h2 {
     font-size: 1.8rem;
-    margin-bottom: 2px;
+    margin-bottom: 20px;
   }
   
   .BirthdayDecorationArea .section-title p {
