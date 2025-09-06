@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { useLocation, useNavigate } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -55,6 +56,7 @@ const Product = () => {
   const [sortedProducts, setSortedProducts] = useState([]);
   const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [showSortFab, setShowSortFab] = useState(false);
   const {
     city,
     filter_city,
@@ -78,6 +80,7 @@ const Product = () => {
   const navigate = useNavigate();
   const initializedRef = useRef(false);
   const refetchedRef = useRef(false);
+  const cardsRef = useRef(null);
 
   // Resolve image URLs robustly (arrays of strings or objects) and sanitize spaces/backslashes
   const sanitizeUrl = (u) => {
@@ -374,6 +377,34 @@ const Product = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Show Sort button when product cards are in view; hide near top
+  useEffect(() => {
+    const target = cardsRef.current;
+    if (!target) return;
+
+    // Prefer IntersectionObserver, fallback to scroll handler where not supported
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          setShowSortFab(Boolean(entry.isIntersecting));
+        },
+        { root: null, threshold: 0.01 }
+      );
+      observer.observe(target);
+      return () => observer.disconnect();
+    }
+
+    const onScroll = () => {
+      const rect = target.getBoundingClientRect();
+      const viewH = window.innerHeight || document.documentElement.clientHeight;
+      // show when top of grid is within viewport minus some offset
+      setShowSortFab(rect.top < viewH - 80);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [sortedProducts?.length]);
+
   return (
     <>
       <div className="Main products-page-container">
@@ -480,15 +511,22 @@ const Product = () => {
             </div>
             <div className="row">
               <div className="col-12" style={{ position: 'relative' }}>
-                {/* Sort Button */}
-                <button
-                  onClick={handleSortModal}
-                  className="sort-btn"
-                >
-                  <i className="fa-solid fa-sort"></i>
-                  <span>Sort</span>
-                </button>
-                <div className="row gy-5">
+                {/* Sort Button via portal to ensure true fixed positioning on mobile */}
+                {createPortal(
+                  (
+                    <button
+                      onClick={handleSortModal}
+                      type="button"
+                      aria-label="Open sort options"
+                      className={`sort-btn sort-fab products-sort-fab ${showSortFab ? 'visible' : 'hidden'}`}
+                    >
+                      <i className="fa-solid fa-sort"></i>
+                      <span>Sort</span>
+                    </button>
+                  ),
+                  document.body
+                )}
+                <div className="row gy-5" ref={cardsRef}>
                   {sortedProducts?.length > 0 ? (
                     sortedProducts?.map((item, i) => {
                       return (
