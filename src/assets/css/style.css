@@ -110,6 +110,9 @@ figure {
   position: relative;
 }
 
+article {
+  padding: 0 5px;
+}
 m {
   margin: 0;
   padding: 0;
@@ -3766,36 +3769,7 @@ i.fa-star {
   margin: 0 auto !important;
 }
 
-/* Responsive FeatureArea container-fluid centering */
-@media (min-width: 576px) {
-  .FeatureArea .container-fluid {
-    max-width: 540px !important;
-  }
-}
 
-@media (min-width: 768px) {
-  .FeatureArea .container-fluid {
-    max-width: 720px !important;
-  }
-}
-
-@media (min-width: 992px) {
-  .FeatureArea .container-fluid {
-    max-width: 960px !important;
-  }
-}
-
-@media (min-width: 1200px) {
-  .FeatureArea .container-fluid {
-    max-width: 1140px !important;
-  }
-}
-
-@media (min-width: 1400px) {
-  .FeatureArea .container-fluid {
-    max-width: 1320px !important;
-  }
-}
 
 /* 4x2 Grid Layout for FeatureArea - Full width utilization */
 .FeatureArea .row {
@@ -4066,7 +4040,7 @@ i.fa-star {
 
 .FeatureArea {
   text-align: center !important;
-  padding: 0 16px;
+  padding: 0 15px;
   width: 100%;
   display: block;
 }
@@ -4156,7 +4130,6 @@ i.fa-star {
   opacity: 1;
 }
 
-.container,
 .container-lg,
 .container-md,
 .container-sm,
@@ -4167,7 +4140,11 @@ i.fa-star {
   padding-right: 15px;
   
 }
-
+.container {
+  width: 100%;
+    padding-left: 15px;
+  padding-right: 15px;
+}
 .container-fluid {
   max-width: 100%;
   margin: 0 auto;
@@ -4176,35 +4153,30 @@ i.fa-star {
 /* Responsive container-fluid centering for all screen sizes */
 @media (min-width: 576px) {
   .container-fluid {
-    max-width: 540px;
     margin: 0 auto;
   }
 }
 
 @media (min-width: 768px) {
   .container-fluid {
-    max-width: 720px;
     margin: 0 auto;
   }
 }
 
 @media (min-width: 992px) {
   .container-fluid {
-    max-width: 960px;
     margin: 0 auto;
   }
 }
 
 @media (min-width: 1200px) {
   .container-fluid {
-    max-width: 1140px;
     margin: 0 auto;
   }
 }
 
 @media (min-width: 1400px) {
   .container-fluid {
-    max-width: 1320px;
     margin: 0 auto;
   }
 }
@@ -7421,13 +7393,12 @@ ul.Icons li a img {
 /* Large screen optimization for FeatureArea */
 @media (min-width: 1400px) {
   .FeatureArea {
-    padding: 60px 30px;
+    padding: 25px 15px;
   }
   
   .FeatureArea .row {
     gap: 25px 20px !important;
     padding: 30px 0 !important;
-    max-width: 1400px !important;
     margin: 0 auto !important;
   }
   
@@ -7452,7 +7423,6 @@ ul.Icons li a img {
   .FeatureArea .row {
     gap: 30px 25px !important;
     padding: 35px 0 !important;
-    max-width: 1600px !important;
     margin: 0 auto !important;
   }
   
@@ -7471,7 +7441,6 @@ ul.Icons li a img {
   .FeatureArea .row {
     gap: 35px 30px !important;
     padding: 40px 0 !important;
-    max-width: 1800px !important;
     margin: 0 auto !important;
   }
   
@@ -7612,13 +7581,12 @@ ul.Icons li a img {
 /* Large screen optimization for FeatureArea */
 @media (min-width: 1400px) {
   .FeatureArea {
-    padding: 60px 30px;
+    padding: 25px 15px;
   }
   
   .FeatureArea .row {
     gap: 25px 20px !important;
     padding: 30px 0 !important;
-    max-width: 1400px !important;
     margin: 0 auto !important;
   }
   
@@ -7643,7 +7611,6 @@ ul.Icons li a img {
   .FeatureArea .row {
     gap: 30px 25px !important;
     padding: 35px 0 !important;
-    max-width: 1600px !important;
     margin: 0 auto !important;
   }
   
@@ -7662,7 +7629,6 @@ ul.Icons li a img {
   .FeatureArea .row {
     gap: 35px 30px !important;
     padding: 40px 0 !important;
-    max-width: 1800px !important;
     margin: 0 auto !important;
   }
   
